@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial_Esp_Prog_4", "Tutorial_Esp_Prog_4\Tutorial_Esp_Prog_4.vcxproj", "{745723EE-FBFB-467B-93FD-1605130150B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Debug|x64.ActiveCfg = Debug|x64
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Debug|x64.Build.0 = Debug|x64
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Debug|x86.ActiveCfg = Debug|Win32
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Debug|x86.Build.0 = Debug|Win32
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Release|x64.ActiveCfg = Release|x64
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Release|x64.Build.0 = Release|x64
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Release|x86.ActiveCfg = Release|Win32
+		{745723EE-FBFB-467B-93FD-1605130150B3}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22814E00-9344-4CB6-B442-A932BB1E138F}
+	EndGlobalSection
+EndGlobal

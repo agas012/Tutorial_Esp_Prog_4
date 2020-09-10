@@ -1,5 +1,7 @@
 #pragma once
 #include "Types.h"
+#include "Enemy.h"
+
 class Hero
 {
 public:
@@ -7,5 +9,8 @@ public:
 	~Hero();
 	CharacterSheet myHero;
 	BasicValues myStatus;
+	friend void fight(Hero* ptrhero, Enemy* ptrenemy);
+
+private:
 };
 

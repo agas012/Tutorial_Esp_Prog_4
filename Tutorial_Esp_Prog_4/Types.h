@@ -16,6 +16,8 @@ struct BasicValues
 {
 	int MaxHitPoints;
 	int CurrentHitPoints;
+	float attack_value;
+	float defence_value;
 };
 
 struct Skills

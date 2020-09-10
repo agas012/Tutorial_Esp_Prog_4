@@ -10,6 +10,8 @@ Hero::Hero()
 	myHero.wisdow = 1;
 	myStatus.MaxHitPoints = .20 * myHero.strength + .60 * myHero.constitution;
 	myStatus.CurrentHitPoints = myStatus.MaxHitPoints;
+	myStatus.attack_value = (myHero.strength * 0.5f) + (myHero.dexterity * 0.3f);
+	myStatus.defence_value = (myHero.constitution * 0.5f) + (myHero.dexterity * 0.3f);
 }
 
 Hero::~Hero()

@@ -23,7 +23,7 @@ int Dice::throw_dice_twelve()
 
 int Dice::throw_dice_select_obj()
 {
-	return 0;
+	return dice_select_obj(engine);
 }
 
 void Dice::change_dice_range(int lim_sup)

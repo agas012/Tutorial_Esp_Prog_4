@@ -12,6 +12,7 @@ Enemy::Enemy()
 	myStatus.CurrentHitPoints = myStatus.MaxHitPoints;
 	myStatus.attack_value = (myEnemy.strength * 0.1f) + (myEnemy.dexterity * 0.1f);
 	myStatus.defence_value = (myEnemy.constitution * 0.1f) + (myEnemy.dexterity * 0.1f);
+	myStatus.current_defence_value = myStatus.defence_value;
 }
 
 Enemy::~Enemy()

@@ -12,6 +12,7 @@ Hero::Hero()
 	myStatus.CurrentHitPoints = myStatus.MaxHitPoints;
 	myStatus.attack_value = (myHero.strength * 0.5f) + (myHero.dexterity * 0.3f);
 	myStatus.defence_value = (myHero.constitution * 0.5f) + (myHero.dexterity * 0.3f);
+	myStatus.current_defence_value = myStatus.defence_value;
 }
 
 Hero::~Hero()

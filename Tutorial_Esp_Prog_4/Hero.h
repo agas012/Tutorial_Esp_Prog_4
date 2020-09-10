@@ -2,6 +2,7 @@
 #include "Types.h"
 #include "Enemy.h"
 
+class Enemy;
 class Hero
 {
 public:

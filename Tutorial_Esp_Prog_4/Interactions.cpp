@@ -15,7 +15,7 @@ void fight(Hero * ptrhero, Enemy * ptrenemy)
 
 	//resolve attack
 	float damage_hero = ptrhero->myStatus.attack_value - ptrenemy->myStatus.defence_value;
-	float damage_enemy = ptrenemy->myStatus.attack_value - ptrhero->myStatus.defence_value;
+	float damage_enemy = ptrenemy->myStatus.attack_value - ptrhero->myStatus.current_defence_value;
 
 	if(damage_hero>0)
 	{
@@ -32,6 +32,7 @@ void fight(Hero * ptrhero, Enemy * ptrenemy)
 		{
 			damage_hero = damage_hero * 2; 
 		}
+		ptrenemy->myStatus.CurrentHitPoints = ptrenemy->myStatus.CurrentHitPoints - damage_hero;
 	}
 
 	if (damage_enemy > 0)
@@ -49,8 +50,13 @@ void fight(Hero * ptrhero, Enemy * ptrenemy)
 		{
 			damage_enemy = damage_enemy * 10;
 		}
+		ptrhero->myStatus.CurrentHitPoints = ptrhero->myStatus.CurrentHitPoints - damage_enemy;
+	}
+	else
+	{
+		ptrhero->myStatus.current_defence_value = ptrhero->myStatus.current_defence_value - (1.5* dices.throw_dice_six());
 	}
 
-	ptrhero->myStatus.CurrentHitPoints = ptrhero->myStatus.CurrentHitPoints - damage_enemy;
-	ptrenemy->myStatus.CurrentHitPoints = ptrenemy->myStatus.CurrentHitPoints - damage_hero;
+	if (dices.throw_dice_twelve() > 8)
+		ptrhero->myStatus.current_defence_value = ptrhero->myStatus.defence_value;
 }

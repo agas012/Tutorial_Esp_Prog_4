@@ -17,6 +17,49 @@ void fight(Hero * ptrhero, Enemy * ptrenemy)
 	float damage_hero = ptrhero->myStatus.attack_value - ptrenemy->myStatus.defence_value;
 	float damage_enemy = ptrenemy->myStatus.attack_value - ptrhero->myStatus.current_defence_value;
 
+	//resolve weapon (final version should be included in the original attack )
+	if (ptrhero->weapon.weapon_type.compare(WeaponsTypes[0]) == 0) //if hero got a sword
+	{
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[1]) == 0)
+		{
+			damage_hero = damage_hero - 3;
+			damage_enemy = damage_enemy + 3;
+		}
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[2]) == 0)
+		{
+			damage_hero = damage_hero + 3;
+			damage_enemy = damage_enemy - 3;
+		}
+	}
+
+	if (ptrhero->weapon.weapon_type.compare(WeaponsTypes[1]) == 0) //if hero got a sword
+	{
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[0]) == 0)
+		{
+			damage_hero = damage_hero + 3;
+			damage_enemy = damage_enemy - 3;
+		}
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[2]) == 0)
+		{
+			damage_hero = damage_hero - 3;
+			damage_enemy = damage_enemy + 3;
+		}
+	}
+
+	if (ptrhero->weapon.weapon_type.compare(WeaponsTypes[2]) == 0) //if hero got a sword
+	{
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[0]) == 0)
+		{
+			damage_hero = damage_hero - 3;
+			damage_enemy = damage_enemy + 3;
+		}
+		if (ptrenemy->weapon.weapon_type.compare(WeaponsTypes[1]) == 0)
+		{
+			damage_hero = damage_hero + 3;
+			damage_enemy = damage_enemy - 3;
+		}
+	}
+
 	if(damage_hero>0)
 	{
 		roll_result = dices.throw_dice_six();

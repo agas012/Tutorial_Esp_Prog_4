@@ -3,6 +3,7 @@
 #include "Dice.h"
 #include "Hero.h"
 #include "Enemy.h"
+#include "Weapons.h"
 #include "Interactions.h"
 
 void main()

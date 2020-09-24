@@ -2,17 +2,18 @@
 
 Enemy::Enemy()
 {
-	myEnemy.strength = 30;
-	myEnemy.charisma = 10;
-	myEnemy.constitution = 50;
-	myEnemy.dexterity = 30;
-	myEnemy.inteligence = 1;
-	myEnemy.wisdow = 1;
-	myStatus.MaxHitPoints = .20 * myEnemy.strength + .60 * myEnemy.constitution;
+	abilities.strength = 30;
+	abilities.charisma = 10;
+	abilities.constitution = 50;
+	abilities.dexterity = 30;
+	abilities.inteligence = 1;
+	abilities.wisdow = 1;
+	myStatus.MaxHitPoints = .20 * abilities.strength + .60 * abilities.constitution;
 	myStatus.CurrentHitPoints = myStatus.MaxHitPoints;
-	myStatus.attack_value = (myEnemy.strength * 0.1f) + (myEnemy.dexterity * 0.1f);
-	myStatus.defence_value = (myEnemy.constitution * 0.1f) + (myEnemy.dexterity * 0.1f);
+	myStatus.attack_value = (abilities.strength * 0.1f) + (abilities.dexterity * 0.1f);
+	myStatus.defence_value = (abilities.constitution * 0.1f) + (abilities.dexterity * 0.1f);
 	myStatus.current_defence_value = myStatus.defence_value;
+	weapon.get_weapon();
 }
 
 Enemy::~Enemy()

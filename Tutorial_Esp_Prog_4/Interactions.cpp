@@ -8,7 +8,7 @@ Interactions::~Interactions()
 {
 }
 
-void fight(Hero * ptrherhttps://www.youtube.com/watch?v=qYD5HHKmVT8o, Enemy * ptrenemy)
+void fight(Hero * ptrhero, Enemy * ptrenemy) //https://www.youtube.com/watch?v=qYD5HHKmVT8o
 {
 	Dice dices;
 	int roll_result;
